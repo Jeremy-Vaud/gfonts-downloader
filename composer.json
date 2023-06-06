@@ -1,0 +1,20 @@
+{
+    "name": "gfontsdownloader/gfontsdownloader",
+    "description": "PHP class to download google fonts in woff2 format",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "GFontsDownloader\\GFontsDownloader\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jeremy Vaud <jeremy.vaud@protonmail.com>"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0.0"
+    }
+}
