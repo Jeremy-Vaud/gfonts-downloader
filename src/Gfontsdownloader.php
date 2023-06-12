@@ -125,7 +125,7 @@ class GFontsDownloader {
                 echo "An error occurred while downloading" . $font["font-family"] . "\n";
                 echo curl_error($ch) . "\n";
             } else {
-                $fileName = trim($font["font-family"], "'") . "-" . $font["font-weight"] . "-$key.woff2";
+                $fileName = trim(str_replace(" ", "_",$font["font-family"]), "'") . "-" . $font["font-weight"] . "-$key.woff2";
                 $file = fopen($this->dir . "/" . $fileName, "w");
                 if (fwrite($file, $response)) {
                     $fontFace = str_replace($url, $fileName, $fontFace);
