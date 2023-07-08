@@ -31,7 +31,7 @@ class GFontsDownloader {
                 throw new \Exception("Invalid Google Fonts URL");
             }
             $this->url = $url;
-            $this->dir = trim($dir, "/");
+            $this->dir = rtrim($dir, "/");
         } catch (\Exception $e) {
             echo ($e->getMessage());
         }
